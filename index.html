@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉菜单</title>
+    <style>
+        *{
+            padding:0;
+        }
+        #nav{
+            width:80px;
+            height:30px;
+            border-bottom: 1px solid #ffffff;
+            position:relative;
+        }
+        #nav ul{
+            list-style-type: none;
+            margin:0;
+            position:absolute;
+            top:31px;
+            display:none;
+        }
+
+        #nav a,#nav li a{
+            display:block;
+            width:100%;
+            height:100%;
+            background-color:#2687eb;
+        }
+
+        #nav li{
+            width:80px;
+            height:30px;
+            background-color:#2687eb;
+            border-bottom:1px solid #ffffff;
+        }
+        #nav a:hover,#nav li a:hover{
+            background-color:#6b839c;
+        }
+
+    </style>
+    <script>
+        window.onload =function(){
+            var nav = document.getElementById("nav");
+            var navUl = nav.getElementsByTagName('ul')[0];
+            nav.onmouseover = function(){
+                navUl.style.display = 'block';
+            }
+            nav.onmouseout = function(){
+                navUl.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="nav">
+        <a href="#"></a>
+        <ul id="navUl">
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+        </ul>
+    </div>
+</body>
+</html>
